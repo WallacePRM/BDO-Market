@@ -1,0 +1,27 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+        <link rel="stylesheet" href="index.css">
+        <script src="jquery-3.4.1.min.js"></script>
+    </head>
+    <body>
+        <div class="item">
+            <div class="preco">
+                <input name="valor-item" placeholder="Valor do Item" type="number">
+            </div>
+            <div class="p-e">
+                <span>Pacote Econômico ativo?</span>
+                <select name="pacote-economico">                  
+                    <option>SIM</option>
+                    <option>NÃO</option>
+                </select>
+            </div>
+            <button onclick="calcularPreco()">Calcular</button>
+        </div>
+
+        <script src="index.js"></script>
+    </body>
+</html>
