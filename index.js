@@ -1,23 +1,55 @@
 
-function calcularPreco() {
-    var resultado;
-    var valorItem = parseFloat($('[name="valor-item"]').val());
-    var condicao = $('[name="pacote-economico"]').val();
+function calculatePrice() {
+    var result;
+    var priceItem = $('[name="price-item"]').val();
+    var condition = $('[name="condition"]')[0].checked;
 
-    if (isNaN(valorItem)) {
-        $('[name="valor-item"]').css('border-bottom', '1px solid #FE3B37');
+    if (isNaN(priceItem)) {
+        $('[name="price-item"]').css('border-bottom', '1px solid #FE3B37');
     }
     else {
-        $('[name="valor-item"]').css('border', '');
+        $('[name="price-item"]').css('border', '');
 
-        if (condicao === 'SIM') {
-        resultado = (valorItem * 35) / 100;
+        if (condition) {
+            result = (priceItem * 5) / 100;
         }
         else {
-            resultado = (valorItem * 5) / 100;
+            result = (priceItem * 35) / 100;
         }
 
-        resultado = valorItem - resultado;
-        alert(resultado);
+        result = priceItem - result;
+
+        $('.result').html(formatterString(result));
     }
+
+    
+}
+
+function formatterString(str) {
+
+    var number = ('' + str).replace('.', ',');
+    
+    if (str < 1000)
+        return number;
+
+    var number2 = '';   
+    var count = 1;
+
+    for (var i = number.length - 1; i >= 0; i--) {
+
+        number2 = number[i] + number2;
+
+        if (number[i] === ',')
+            count = 0;
+
+        if (count === 3 && i !== 0) {
+
+            number2 = '.' + number2;
+            count = 0;
+        }
+        
+        count++;
+    }
+
+    return number2;
 }

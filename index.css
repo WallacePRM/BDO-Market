@@ -1,43 +1,54 @@
 body {
+    font-family: 'Kulim Park', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #222;
+    color: #666;
+    margin: 0;
+}
+
+.bar {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.item {
+    width: 100%;
+    border-radius: 3px;
+    padding: 10px 20px; 
+}
+
+.header h2 {
+    margin: 0;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.content [name="price-item"] {
+    width: 100%;
+    background-color: #222;
+    border: none;
+    border-bottom: 1px solid rgb(80, 204, 192);
+    color: rgb(80, 204, 192);
+    font-size: 1rem;
+    outline-style: none;
+    margin-bottom: 20px;
+    padding: 5px 0;
+    
+}
+
+.baseboard {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.item {
-    border: 1px solid #ccc;
-    border-radius: 3px;
-    padding: 10px 20px;
-    color: #666;
-}
-
-.preco input {
-    font-size: 1rem;
-    padding: 5px 10px;
-    border: none;
-    border-bottom: 1px solid #ccc;
-    outline-style: none;
-    width: 100%;
-    padding-left: 0;
-}
-
-.p-e {
-    margin-top: 5px;
-}
-
-.p-e span {
+.result {
+    margin-top: 20px;
+    color: rgb(80, 204, 192);
     font-size: 1.2rem;
-    margin-right: 10px;
+    font-weight: bold;
 }
 
-button {
-    margin-top: 10px;
-    padding: 5px 10px;
-    border: 1px solid #ccc;
-    outline-style: none;
-    cursor: pointer;
-}
-
-button:hover {
-    border: 1px solid #aaa;
-}

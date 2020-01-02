@@ -3,23 +3,26 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Document</title>
+        <title>BDO Market</title>
+        <link href="https://fonts.googleapis.com/css?family=Kulim+Park&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="index.css">
         <script src="jquery-3.4.1.min.js"></script>
     </head>
     <body>
-        <div class="item">
-            <div class="preco">
-                <input name="valor-item" placeholder="Valor do Item" type="number">
+        <div class="bar">
+            <div class="item">
+                <div class="header">
+                    <h2>BDO item sale price</h2>
+                </div>
+                <div class="content">
+                   <input onkeyup="calculatePrice()" name="price-item" type="number">
+                   
+                   <label><input onchange="calculatePrice()" name="condition" type="checkbox">Active economic package</label>
+                </div>
+                <div class="baseboard">
+                    <span class="result">950000.00</span>
+                </div>
             </div>
-            <div class="p-e">
-                <span>Pacote Econômico ativo?</span>
-                <select name="pacote-economico">                  
-                    <option>SIM</option>
-                    <option>NÃO</option>
-                </select>
-            </div>
-            <button onclick="calcularPreco()">Calcular</button>
         </div>
 
         <script src="index.js"></script>
