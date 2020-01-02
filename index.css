@@ -36,7 +36,10 @@ body {
     outline-style: none;
     margin-bottom: 20px;
     padding: 5px 0;
-    
+}
+
+.content label {
+    cursor: pointer;
 }
 
 .baseboard {
