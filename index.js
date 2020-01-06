@@ -1,7 +1,10 @@
 
+var soma = 0;
+
 function calculatePrice() {
+
     var result;
-    var priceItem = $('[name="price-item"]').val();
+    var priceItem = soma; //$('[name="price-item"]').val();
     var condition = $('[name="condition"]')[0].checked;
 
     if (isNaN(priceItem)) {
@@ -21,8 +24,6 @@ function calculatePrice() {
 
         $('.result').html(formatterString(result));
     }
-
-    
 }
 
 function formatterString(str) {
@@ -52,4 +53,27 @@ function formatterString(str) {
     }
 
     return number2;
+}
+
+function addOtherItem() {
+
+    // pegar o valor
+    var priceItem = parseFloat($('[name="price-item"]').val());
+    // limpar o input
+    $('[name="price-item"]').val('');
+    // somar o valor obtido com o valor atual
+    soma = priceItem + soma;
+
+    calculatePrice(soma)
+}
+
+function priceItemKeyPress(event) {
+    if (event.keyCode === 13) {
+        addOtherItem();
+    }
+}
+
+function resetTotal() {
+    $('.result').html('');
+    soma = 0;
 }

@@ -1,3 +1,4 @@
+
 body {
     font-family: 'Kulim Park', sans-serif;
     display: flex;
@@ -23,7 +24,6 @@ body {
 .header h2 {
     margin: 0;
     margin-bottom: 20px;
-    text-align: center;
 }
 
 .content [name="price-item"] {
@@ -33,8 +33,7 @@ body {
     border-bottom: 1px solid rgb(80, 204, 192);
     color: rgb(80, 204, 192);
     font-size: 1rem;
-    outline-style: none;
-    margin-bottom: 20px;
+    outline-style: none; 
     padding: 5px 0;
 }
 
@@ -42,8 +41,40 @@ body {
     cursor: pointer;
 }
 
+.any-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.any-item i {
+    color: rgb(70, 190, 178);
+    cursor: pointer;
+    margin-left: 20px;
+}
+
+.any-item i:hover {
+    color: rgb(134, 204, 197);
+}
+
+.economic-package input {
+    margin: 0;
+    margin-right: 10px;
+}
+
+.baseboard p {
+    text-align: center;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.economic-package p:hover {
+    color: rgb(70, 190, 178);
+}
+
 .baseboard {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 }

@@ -7,6 +7,7 @@
         <link href="https://fonts.googleapis.com/css?family=Kulim+Park&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="index.css">
         <script src="jquery-3.4.1.min.js"></script>
+        <script src="https://kit.fontawesome.com/1b79c4b552.js" crossorigin="anonymous"></script>
     </head>
     <body>
         <div class="bar">
@@ -15,12 +16,17 @@
                     <h2>BDO item sale price</h2>
                 </div>
                 <div class="content">
-                   <input onkeyup="calculatePrice()" placeholder="Item Value" name="price-item" type="number">
-                   
-                   <label><input onchange="calculatePrice()" name="condition" type="checkbox">Active economic package</label>
+                    <div class="any-item">
+                        <input onkeyup="priceItemKeyPress(event)" placeholder="Item Value" name="price-item" type="number">
+                        <i onclick="addOtherItem()" class="fas fa-plus"></i>
+                   </div>
+                    <div class="economic-package">
+                        <label><input onchange="calculatePrice()" name="condition" type="checkbox">Active economic package</label>
+                    </div>
                 </div>
                 <div class="baseboard">
                     <span class="result"></span>
+                    <p onclick="resetTotal()">Reset</p>
                 </div>
             </div>
         </div>
