@@ -4,26 +4,19 @@ var soma = 0;
 function calculatePrice() {
 
     var result;
-    var priceItem = soma; //$('[name="price-item"]').val();
+    var priceItem = soma;
     var condition = $('[name="condition"]')[0].checked;
 
-    if (isNaN(priceItem)) {
-        $('[name="price-item"]').css('border-bottom', '1px solid #FE3B37');
+    if (condition) {
+        result = (priceItem * 5) / 100;
     }
     else {
-        $('[name="price-item"]').css('border', '');
-
-        if (condition) {
-            result = (priceItem * 5) / 100;
-        }
-        else {
-            result = (priceItem * 35) / 100;
-        }
-
-        result = priceItem - result;
-
-        $('.result').html(formatterString(result));
+        result = (priceItem * 35) / 100;
     }
+
+    result = priceItem - result;
+
+    $('.result').html(formatterString(result));
 }
 
 function formatterString(str) {
@@ -56,14 +49,19 @@ function formatterString(str) {
 }
 
 function addOtherItem() {
-
-    // pegar o valor
+    
     var priceItem = parseFloat($('[name="price-item"]').val());
-    // limpar o input
-    $('[name="price-item"]').val('');
-    // somar o valor obtido com o valor atual
-    soma = priceItem + soma;
+    
+    if (isNaN(priceItem)) {
+        $('[name="price-item"]').css('border-bottom', '1px solid #FE3B37');
+    }
+    else {
+        $('[name="price-item"]').css('border', '');
+        soma = priceItem + soma;
+    }
 
+    $('[name="price-item"]').val('');
+        
     calculatePrice(soma)
 }
 

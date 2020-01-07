@@ -3,6 +3,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta name="mobile-web-app-capable" content="yes">
         <title>BDO Market</title>
         <link href="https://fonts.googleapis.com/css?family=Kulim+Park&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="index.css">
@@ -17,8 +18,7 @@
                 </div>
                 <div class="content">
                     <div class="any-item">
-                        <input onkeyup="priceItemKeyPress(event)" placeholder="Item Value" name="price-item" type="number">
-                        <i onclick="addOtherItem()" class="fas fa-plus"></i>
+                        <input onkeyup="priceItemKeyPress(event)" placeholder="Type and press enter" name="price-item" type="number">
                    </div>
                     <div class="economic-package">
                         <label><input onchange="calculatePrice()" name="condition" type="checkbox">Active economic package</label>
@@ -29,6 +29,14 @@
                     <p onclick="resetTotal()">Reset</p>
                 </div>
             </div>
+        </div>
+
+
+
+
+
+        <div class="credits">
+            <div>Icons made by <a href="https://www.flaticon.com/authors/roundicons" title="Roundicons">Roundicons</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
         </div>
 
         <script src="index.js"></script>

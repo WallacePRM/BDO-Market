@@ -86,3 +86,14 @@ body {
     font-weight: bold;
 }
 
+
+
+.credits {
+    position: absolute;
+    bottom: 5px;
+    font-size: 0.7rem;
+}
+
+.credits a {
+    color: rgb(230, 227, 227);
+}
