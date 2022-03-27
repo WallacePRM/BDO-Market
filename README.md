@@ -1,3 +1,3 @@
-# BDO-PriceCalculator
+# BDO-Market
 
-Link: https://inextzbgd.github.io/CalcularPrecoBDO
+Link: https://wallaceprm.github.io/BDO-Market/
